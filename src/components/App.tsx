@@ -1,10 +1,10 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import memoji_1 from "./assets/memojis/memoji-1.png";
-import memoji_2 from "./assets/memojis/memoji-2.png";
-import memoji_3 from "./assets/memojis/memoji-3.png";
-import obLogo from "./assets/ob-logo.svg";
-import "./App.css";
+import reactLogo from "../assets/react.svg";
+import memoji_1 from "../assets/memojis/memoji-1.png";
+import memoji_2 from "../assets/memojis/memoji-2.png";
+import memoji_3 from "../assets/memojis/memoji-3.png";
+import obLogo from "../assets/ob-logo.svg";
+import "./styles/App.css";
 
 function App() {
   // memojis
@@ -19,6 +19,7 @@ function App() {
     <div className="App">
       <div>
         <div>
+          <br/><br/><br/><br/>
           <img src={memojis[currentMemojiIndex]} className="memoji" id="memoji" alt="Oliver's memoji" onClick={iterateMemoji}/>
           <h1>Oliver Bluff</h1>
           <code>Click the memoji to change!</code>

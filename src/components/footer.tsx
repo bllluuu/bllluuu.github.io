@@ -3,8 +3,8 @@ import "./styles/footer.css";
 
 function Footer() {
   return (
-    <div className="footer">
-      <hr />
+    <footer>
+      {/* <hr /> */}
       Contact
       <div>
         <a href="https://www.linkedin.com/in/oliver-bluff-4ba183196/" target="_blank">
@@ -15,7 +15,7 @@ function Footer() {
           <code>GitHub</code>
         </a>
       </div>
-    </div>
+    </footer>
   );
 }
 

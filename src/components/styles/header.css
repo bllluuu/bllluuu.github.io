@@ -32,6 +32,7 @@ header {
       align-items: flex-start;
     }
 
+    /* show the hamburger icon */
     .hamburger {
         display:flex;
     }
