@@ -1,5 +1,6 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
+import memoji from "./assets/memoji.png";
 import "./App.css";
 
 function App() {
@@ -8,8 +9,10 @@ function App() {
   return (
     <div className="App">
       <div>
-        <h1>Oli's Website</h1>
-        <p>Will this update the build?</p>
+        <div>
+          <img src={memoji} className="memoji" alt="Oliver's memoji" />
+          <h1>Oliver Bluff</h1>
+        </div>
         <a href="https://vitejs.dev" target="_blank">
           <img src="/vite.svg" className="logo" alt="Vite logo" />
         </a>

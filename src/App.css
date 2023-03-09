@@ -5,8 +5,21 @@
   text-align: center;
 }
 
+.memoji {
+  height: 8em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.memoji:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.memoji.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
 .logo {
-  height: 6em;
+  height: 3em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
