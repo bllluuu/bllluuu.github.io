@@ -3,6 +3,7 @@ import reactLogo from "./assets/react.svg";
 import memoji_1 from "./assets/memojis/memoji-1.png";
 import memoji_2 from "./assets/memojis/memoji-2.png";
 import memoji_3 from "./assets/memojis/memoji-3.png";
+import obLogo from "./assets/ob-logo.svg";
 import "./App.css";
 
 function App() {
@@ -28,12 +29,13 @@ function App() {
         <a href="https://reactjs.org" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
+        <img src={obLogo} className="logo react" alt="OB Logo" />
       </div>
       <br/>
       <br/>
       <br/>
       <br/>
-      <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+      <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
     </div>
   );
 }

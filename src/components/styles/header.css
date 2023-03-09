@@ -1,0 +1,51 @@
+/* Default styles for Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    /* box-shadow: 0 5px 5px rgba(255, 255, 255, 0.5); */
+  }
+  
+  img {
+    height: 3rem;
+  }
+  
+  nav {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .hamburger {
+    display:none;
+}
+
+  /* Responsive styles for Header */
+  @media (max-width: 750px) {
+    /* change header to column on mobile */
+    header {
+      align-items: flex-start;
+    }
+
+    .hamburger {
+        display:flex;
+    }
+  
+    img {
+      height: 2rem;
+      margin-bottom: 1rem;
+    }
+  
+    nav {
+        display: none;
+    }
+  
+    a {
+      font-size: 0.9rem;
+    }
+  }
