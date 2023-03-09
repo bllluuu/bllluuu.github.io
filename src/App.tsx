@@ -6,8 +6,6 @@ import memoji_3 from "./assets/memojis/memoji-3.png";
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   // memojis
   const memojis: string[] = [memoji_1, memoji_2, memoji_3,];
   const [currentMemojiIndex, setCurrentMemojiIndex] = useState(0);
@@ -31,6 +29,7 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
+      <code>Build to see if workflow deploy works</code>
     </div>
   );
 }
