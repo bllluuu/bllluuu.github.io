@@ -1,4 +1,5 @@
 .DS_STORE
+website-venv/
 node_modules
 scripts/flow/*/.flowconfig
 .flowconfig
