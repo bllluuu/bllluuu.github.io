@@ -19,7 +19,7 @@ function App() {
     <div className="App">
       <div>
         <div>
-          <br/><br/><br/><br/>
+          <br/><br/><br/><br/><br/>
           <img src={memojis[currentMemojiIndex]} className="memoji" id="memoji" alt="Oliver's memoji" onClick={iterateMemoji}/>
           <h1>Oliver Bluff</h1>
           <code>Click the memoji to change!</code>

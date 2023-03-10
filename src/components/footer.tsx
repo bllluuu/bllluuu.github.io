@@ -14,6 +14,7 @@ function Footer() {
         <a href="https://github.com/bllluuu" target="_blank">
           <code>GitHub</code>
         </a>
+        <p>© 2023 Oliver Bluff</p>
       </div>
     </footer>
   );
