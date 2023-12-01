@@ -25,7 +25,7 @@ function App() {
           <br />
           <br />
           <br />
-          <video width="750" height="500" autoPlay loop>
+          <video width="750" height="500" autoPlay loop muted>
             <source src={bluffOval} type="video/mp4"/>
           </video>
           <h1>Oliver Bluff</h1>
