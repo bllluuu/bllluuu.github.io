@@ -52,6 +52,28 @@ function App() {
     };
   }, [isMobile]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      // Get the current scroll position
+      const scrollPosition = window.scrollY;
+  
+      // Map the scroll position to the video timestamp
+      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      const timestamp = (scrollPosition / maxScroll) * (videoRef.current?.duration || 0);
+  
+      // Set the video timestamp if videoRef is defined
+      if (videoRef.current) {
+        videoRef.current.currentTime = timestamp;
+      }
+    };
+  
+    window.addEventListener("scroll", handleScroll);
+  
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [videoRef.current]);
+
   return (
     <div className="App">
       <div>
