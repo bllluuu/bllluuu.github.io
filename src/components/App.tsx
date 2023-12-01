@@ -4,6 +4,7 @@ import memoji_1 from "../assets/memojis/memoji-1.png";
 import memoji_2 from "../assets/memojis/memoji-2.png";
 import memoji_3 from "../assets/memojis/memoji-3.png";
 import obLogo from "../assets/ob-logo.svg";
+import bluffOval from "../assets/0001-0250.mp4";
 import linkedIn from "../assets/linkedin-icon.svg";
 import gitHub from "../assets/github-icon.svg";
 import "./styles/App.css";
@@ -24,17 +25,10 @@ function App() {
           <br />
           <br />
           <br />
-          <br />
-          <br />
-          <img
-            src={memojis[currentMemojiIndex]}
-            className="memoji"
-            id="memoji"
-            alt="Oliver's memoji"
-            onClick={iterateMemoji}
-          />
+          <video width="750" height="500" autoPlay loop>
+            <source src={bluffOval} type="video/mp4"/>
+          </video>
           <h1>Oliver Bluff</h1>
-          <code>Click the memoji to change!</code>
         </div>
         <a href="https://vitejs.dev" target="_blank">
           <img src="/vite.svg" className="logo" alt="Vite logo" />
