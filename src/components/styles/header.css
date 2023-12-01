@@ -41,9 +41,9 @@ header {
     }
 
     /* show the hamburger icon */
-    .hamburger {
+    /* .hamburger {
         display:flex;
-    }
+    } */
   
     img {
       height: 2rem;
