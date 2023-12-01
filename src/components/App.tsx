@@ -60,11 +60,11 @@ function App() {
           <br />
           <br />
           {isMobile ? (
-            <video ref={videoRef} width="500" height="750" autoPlay loop muted>
+            <video ref={videoRef} width="500" height="750" autoPlay loop muted playsInline>
               <source src={bluffTextMobile} type="video/mp4" />
             </video>
           ) : (
-            <video ref={videoRef} width="750" height="500" autoPlay loop muted>
+            <video ref={videoRef} width="750" height="500" autoPlay loop muted playsInline>
               <source src={bluffOvalDesktop} type="video/mp4" />
             </video>
           )}
