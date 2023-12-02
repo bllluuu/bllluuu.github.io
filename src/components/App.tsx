@@ -11,31 +11,34 @@ import gitHub from "../assets/github-icon.svg";
 import "./styles/App.css";
 
 function App() {
-  // memojis
-  const memojis: string[] = [memoji_1, memoji_2, memoji_3];
-  const [currentMemojiIndex, setCurrentMemojiIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 750);
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const previousTimeRef = useRef<number>(0);
   const isPlayingRef = useRef<boolean>(false);
 
   useEffect(() => {
+    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+    if (isSafari && isMobile) {
+      document.body.style.overflow = "hidden";
+
+      return () => {
+        document.body.style.overflow = "auto";
+      };
+    }
+  }, [isMobile]);
+
+  useEffect(() => {
     const handleResize = () => {
       if (videoRef.current) {
-        // Save the current playback state
         previousTimeRef.current = videoRef.current.currentTime;
         isPlayingRef.current = !videoRef.current.paused;
 
         videoRef.current.src = null!;
         videoRef.current.load();
 
-        if (!isMobile) {
-          videoRef.current.src = bluffOvalDesktop;
-        } else {
-          videoRef.current.src = bluffTextMobile;
-        }
+        videoRef.current.src = isMobile ? bluffTextMobile : bluffOvalDesktop;
 
-        // Restore the previous playback state
         videoRef.current.currentTime = previousTimeRef.current;
         if (isPlayingRef.current) {
           videoRef.current.play();
@@ -54,21 +57,17 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Get the current scroll position
       const scrollPosition = window.scrollY;
-  
-      // Map the scroll position to the video timestamp
       const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
       const timestamp = (scrollPosition / maxScroll) * (videoRef.current?.duration || 0);
-  
-      // Set the video timestamp if videoRef is defined
+
       if (videoRef.current) {
         videoRef.current.currentTime = timestamp;
       }
     };
-  
+
     window.addEventListener("scroll", handleScroll);
-  
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -78,8 +77,6 @@ function App() {
     <div className="App">
       <div>
         <div>
-          <br />
-          <br />
           <br />
           {isMobile ? (
             <video ref={videoRef} width="500" height="750" autoPlay loop muted playsInline
@@ -93,9 +90,13 @@ function App() {
               <source src={bluffTextMobile} type="video/mp4" />
             </video>
           ) : (
-            <video ref={videoRef} width="750" height="500" autoPlay loop muted playsInline>
-              <source src={bluffOvalDesktop} type="video/mp4" />
-            </video>
+            <div>
+              <br />
+              <br />
+              <video ref={videoRef} width="750" height="500" autoPlay loop muted playsInline>
+                <source src={bluffOvalDesktop} type="video/mp4" />
+              </video>
+            </div>
           )}
           <h1>Oliver Bluff</h1>
         </div>
