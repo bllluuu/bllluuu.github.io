@@ -4,6 +4,7 @@ import memoji_1 from "../assets/memojis/memoji-1.png";
 import memoji_2 from "../assets/memojis/memoji-2.png";
 import memoji_3 from "../assets/memojis/memoji-3.png";
 import obLogo from "../assets/ob-logo.svg";
+import iOSIcon from "../assets/iOSIconWhite.svg";
 import bluffOvalDesktop from "../assets/0001-0250.mp4";
 import bluffTextMobile from "../assets/Bluff_Portrait_Text.mp4";
 import linkedIn from "../assets/linkedin-icon.svg";
@@ -106,7 +107,7 @@ function App() {
         <a href="https://reactjs.org" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
-        <img src={obLogo} className="logo react" alt="OB Logo" />
+        <img src={iOSIcon} className="logo react" alt="OB Logo" />
         <a
           href="https://www.linkedin.com/in/oliver-bluff-4ba183196/"
           target="_blank"
