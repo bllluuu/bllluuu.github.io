@@ -100,6 +100,7 @@ function App() {
             </div>
           )}
           <h1>Oliver Bluff</h1>
+          <h3>email me at oliver1bluff@gmail.com</h3>
         </div>
         <img src={iOSIcon} className="logo react" alt="OB Logo" />
         <a
